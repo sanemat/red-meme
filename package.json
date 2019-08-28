@@ -1,17 +1,21 @@
 {
   "name": "red-meme",
-  "version": "0.1.0",
   "description": "meme",
-  "main": "index.js",
-  "private": true,
+  "version": "0.1.0",
+  "author": "sanemat",
   "directories": {
     "lib": "lib",
     "test": "test"
   },
+  "files": [
+    "bin/",
+    "lib/",
+    "src/"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "sanemat",
-  "license": "ISC",
-  "files": ["bin/", "lib/", "src/"]
+  }
 }
