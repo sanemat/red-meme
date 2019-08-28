@@ -1,8 +1,8 @@
 const hello = () => {
-    return "Hello World!";
+  return "Hello World!";
 };
 // main
 const main = document.getElementById("js-main");
 if (main) {
-    main.textContent = hello();
+  main.textContent = hello();
 }

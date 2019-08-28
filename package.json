@@ -17,7 +17,8 @@
   "private": true,
   "scripts": {
     "start": "parcel serve src/index.html",
-    "test": "echo \"It works.\" && exit 0"
+    "test": "echo \"It works.\" && exit 0",
+    "prettier": "prettier --write \"{src,test,example}/**/*.ts\""
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.3",
