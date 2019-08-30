@@ -21,6 +21,7 @@
     "start": "parcel serve src/index.html",
     "test": "echo \"It works.\" && exit 0",
     "predeploy": "npm run build",
+    "watch": "parcel watch src/index.html",
     "prettier": "prettier --write \"{src,test,example}/**/*.ts\""
   },
   "devDependencies": {
