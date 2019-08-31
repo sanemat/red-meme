@@ -1,5 +1,7 @@
 .main {
+    display: flex;
 }
 
-#screen {
+.menu {
+    display: flex;
 }
