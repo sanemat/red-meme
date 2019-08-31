@@ -17,11 +17,19 @@ import audioUrl = require("./7sxtEOR7zhrd.128.mp3");
 const audio = new Audio(audioUrl);
 
 menuStart.addEventListener("touchstart", () => {
-  audio.play();
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
 });
 
 menuStart.addEventListener("click", () => {
-  audio.play();
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
 });
 
 const playable = (): void => {
