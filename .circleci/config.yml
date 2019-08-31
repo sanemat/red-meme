@@ -35,6 +35,11 @@ jobs:
 
       - run: npm run lint
       - run: npm run test
+      - persist_to_workspace:
+          root: ~/repo
+          paths:
+            - ./dist
+            - ./node_modules
 
   deploy:
     docker:
@@ -43,6 +48,8 @@ jobs:
 
     working_directory: ~/repo
     steps:
+      - attach_workspace:
+          at: ~/repo
       - run:
           name: Deploy Master to Firebase
           command: npm run deploy -- --token=$FIREBASE_DEPLOY_TOKEN
