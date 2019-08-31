@@ -27,6 +27,7 @@
   "private": true,
   "scripts": {
     "build": "cross-env NODE_ENV=production parcel build src/index.html --public-url .",
+    "deploy": "firebase deploy",
     "lint": "eslint \"{src,test}/**/*.ts\"",
     "predeploy": "npm run build",
     "prettier": "prettier --write \"{src,test,example}/**/*.ts\"",
