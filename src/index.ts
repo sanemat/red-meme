@@ -1,8 +1,7 @@
-// const hello = (): string => {
-//   return "Hello World!";
-// };
-// // main
-// const main = document.getElementById("js-main");
-// if (main) {
-//   main.textContent = hello();
-// }
+const menuVideos = document.getElementsByClassName("menu__video");
+for (let i = 0; i < menuVideos.length; i++) {
+  menuVideos[i].addEventListener("change", event => {
+    const file = (event.target as HTMLInputElement).files[0];
+    console.log(file);
+  });
+}
