@@ -53,9 +53,10 @@ jobs:
             - v1-dependencies-
 
       - run: npm i
+      # Set FIREBASE_TOKEN
       - run:
           name: Deploy Master to Firebase
-          command: npm run deploy -- --token=$FIREBASE_DEPLOY_TOKEN
+          command: npm run deploy
 
 workflows:
   version: 2
