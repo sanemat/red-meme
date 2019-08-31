@@ -1,5 +1,8 @@
 const menuVideo = document.getElementsByClassName("menu__video")[0];
 const menuDetails = document.getElementsByClassName("menu__details")[0];
+const menuStart = document.getElementsByClassName(
+  "menu__start"
+)[0] as HTMLInputElement;
 
 const notifyFile = (file: File): void => {
   menuDetails.textContent = `
@@ -10,7 +13,31 @@ const notifyFile = (file: File): void => {
     `;
 };
 
+import audioUrl = require("./7sxtEOR7zhrd.128.mp3");
+const audio = new Audio(audioUrl);
+
+menuStart.addEventListener("touchstart", () => {
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+});
+
+menuStart.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+});
+
+const playable = (): void => {
+  menuStart.disabled = false;
+};
+
 menuVideo.addEventListener("change", event => {
   const file = (event.target as HTMLInputElement).files[0];
   notifyFile(file);
+  playable();
 });
