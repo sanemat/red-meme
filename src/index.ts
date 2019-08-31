@@ -13,6 +13,17 @@ const notifyFile = (file: File): void => {
     `;
 };
 
+import audioUrl = require("./7sxtEOR7zhrd.128.mp3");
+const audio = new Audio(audioUrl);
+
+menuStart.addEventListener("touchstart", () => {
+  audio.play();
+});
+
+menuStart.addEventListener("click", () => {
+  audio.play();
+});
+
 const playable = (): void => {
   menuStart.disabled = false;
 };
@@ -20,4 +31,5 @@ const playable = (): void => {
 menuVideo.addEventListener("change", event => {
   const file = (event.target as HTMLInputElement).files[0];
   notifyFile(file);
+  playable();
 });
