@@ -16,14 +16,6 @@ const notifyFile = (file: File): void => {
 import audioUrl = require("./7sxtEOR7zhrd.128.mp3");
 const audio = new Audio(audioUrl);
 
-menuStart.addEventListener("touchstart", () => {
-  if (audio.paused) {
-    audio.play();
-  } else {
-    audio.pause();
-  }
-});
-
 menuStart.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
