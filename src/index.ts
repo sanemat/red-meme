@@ -13,7 +13,7 @@ const notifyFile = (file: File): void => {
     `;
 };
 
-import audioUrl = require("./7sxtEOR7zhrd.128.mp3");
+import audioUrl = require("./7sxtEOR7zhrd-60sec-fade-out.128.mp3");
 const audio = new Audio(audioUrl);
 
 menuStart.addEventListener("click", () => {
